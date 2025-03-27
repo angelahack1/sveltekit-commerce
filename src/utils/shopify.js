@@ -1,4 +1,5 @@
 export async function shopifyFetch({ query, variables }) {
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED='0';
   const endpoint =
     import.meta.env.VITE_SHOPIFY_API_ENDPOINT ||
     'https://next-js-store.myshopify.com/api/2021-10/graphql.json';

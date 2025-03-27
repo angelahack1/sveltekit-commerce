@@ -9,7 +9,8 @@
     "check": "svelte-check --tsconfig ./jsconfig.json",
     "check:watch": "svelte-check --tsconfig ./jsconfig.json --watch",
     "lint": "prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "clean": "rd /s /q node_modules & rd /s /q .svelte-kit & rd /s /q .vercel"
   },
   "devDependencies": {
     "@sveltejs/adapter-vercel": "^5.6.1",
@@ -24,5 +25,8 @@
     "tailwindcss": "^4.0.0",
     "vite": "^6.1.0"
   },
-  "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a"
+  "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a",
+  "dependencies": {
+    "@vercel/analytics": "^1.5.0"
+  }
 }
