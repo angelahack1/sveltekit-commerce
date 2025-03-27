@@ -6,6 +6,11 @@
   import { getCartItems } from '../store';
   import { onMount } from 'svelte';
   import { createCart } from '$utils/shopify';
+  import { dev } from '$app/environment';
+  import { injectAnalytics } from '@vercel/analytics/sveltekit';
+ 
+  injectAnalytics({ mode: dev ? 'development' : 'production' });
+  
   /** @type {{children?: import('svelte').Snippet}} */
   let { children } = $props();
 
